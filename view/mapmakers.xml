@@ -1,0 +1,9 @@
+<markers>
+    <marker id="1" name="Posto de Coleta - Adega Atacadista" address="SIA - QEDD Numero 100" lat="15.829302199999997" lng="-48.1113133" type="restaurant"/>
+    <marker id="2" name="Posto de Coleta - Fort Atacadista" address="SIA - QEDD Numero 100" lat="-15.229302199999997" lng="-48.1113133" type="restaurant"/>
+    <marker id="3" name="Posto de Coleta - Carrefour Atacadista" address="SIA - QEDD Numero 100" lat="-15.329302199999997" lng="-48.1113133" type="bar"/>
+    <marker id="4" name="Posto de Coleta - Extra Atacadista" address="SIA - QEDD Numero 100" lat="-15.429302199999997" lng="-48.1113133" type="bar"/>
+    <marker id="5" name="Posto de Coleta - Leroi Merlin" address="SIA - QEDD Numero 100" lat="-15.529302199999997" lng="-48.1113133" type="bar"/>
+    <marker id="6" name="Posto de Coleta - Base Atacadista" address="SIA - QEDD Numero 100" lat="-15.629302199999997" lng="-48.1113133" type="bar"/>
+    <marker id="7" name="Posto de Coleta - Espírito Santo Atacadista" address="SIA - QEDD Numero 100" lat="-15.729302199999997 lng="-48.1113133" type="restaurant"/>
+</markers>
