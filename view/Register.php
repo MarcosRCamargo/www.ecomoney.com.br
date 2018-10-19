@@ -6,27 +6,9 @@
  * Time: 00:52
  */
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- PAGE settings -->
-    <link rel="icon" href="assets/app/icon.png">
-    <title>App EcoMoney</title>
-    <meta name="description" content="Free Bootstrap 4 Pingendo Aquamarine template made for app and softwares.">
-    <meta name="keywords" content="Pingendo app aquamarine free template bootstrap 4">
-    <!-- CSS dependencies -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/aquamarine.css">
-    <!-- Script: Make my navbar transparent when the document is scrolled to top -->
-    <script src="js/navbar-ontop.js"></script>
-    <!-- Script: Animated entrance -->
-    <script src="js/animate-in.js"></script>
-</head>
-
+<?php
+include_once 'header.php';
+?>
 <body>
 <!-- Navbar -->
 <nav class="navbar-expand-md navbar-dark fixed-top navbar bg-primary">
@@ -104,11 +86,29 @@
                         <label for="address2">Complemento&nbsp;
                             <span class="text-muted">(Opicional)</span>
                         </label>
-                        <input type="text" class="form-control" id="address2" placeholder="Quadra ou Logradouro"> </div>
+                        <input type="text" class="form-control" id="address2" placeholder="Quadra ou Logradouro">
+                    </div>
                     <div class="row">
-                        <div class="col-md-5 mb-3">
+                        <div class="col-md-4 mb-3">
+                            <label for="country">CPF:</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="" required="" onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" maxlength="14">
+                            <div class="invalid-feedback"> Por favor informe uma CPF válido.</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="country">CNPJ:</label>
+                            <input type="text" class="form-control" id="cnpj" placeholder="" required="" onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" maxlength="14">
+                            <div class="invalid-feedback"> Por favor informe uma CNPJ válido.</div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="zip">Telefone</label>
+                            <input type="text" class="form-control cel-sp-mask" placeholder="Ex.: (00) 00000-0000" data-mask="(99) 99999-9999" maxlength="15">
+                            <div class="invalid-feedback"> Telefone</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
                             <label for="country">Cidade</label>
-                            <input type="text" class="form-control" id="country" placeholder="" required="">
+                            <input type="text" class="phone-ddd-mask" id="country" placeholder="" required="">
                             <div class="invalid-feedback"> Por favor informe uma cidade válida.</div>
                         </div>
                         <div class="col-md-4 mb-3">
@@ -146,7 +146,7 @@
                             </select>
                             <div class="invalid-feedback"> Por favor Selecione um estado. </div>
                         </div>
-                        <div class="col-md-3 mb-3">
+                        <div class="col-md-4 mb-3">
                             <label for="zip">CEP</label>
                             <input type="text" class="form-control" id="zip" placeholder="" required="">
                             <div class="invalid-feedback"> Código postal é obrigatório. </div>

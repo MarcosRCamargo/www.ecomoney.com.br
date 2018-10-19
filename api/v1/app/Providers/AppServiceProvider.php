@@ -14,5 +14,9 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->bind(
+            'App\Repositories\MaterialsRepositoryinterface',
+            'App\Repositories\MaterialRepositoryEloquent'
+        );
     }
 }
