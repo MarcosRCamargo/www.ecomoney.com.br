@@ -12,7 +12,7 @@ use App\Models\UserEcoMoney;
 use App\Repositories\UserRepositoryinterface;
 use Illuminate\Http\Request;
 
-class UsersRepositoryEloquent implements UserRepositoryinterface
+class UserRepositoryEloquent implements UserRepositoryinterface
 {
     private $user;
     protected $prymaryKey = 'id_user';
