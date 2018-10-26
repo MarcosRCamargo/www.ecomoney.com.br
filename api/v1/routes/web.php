@@ -4,27 +4,32 @@
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
+|Todas as rotas URI - ou Serviços que serão consumidos são Definidas neste
+|código.
 |
 */
-//Recupera todos os materiais ou apenas um material pelo seu ID
 
-$router->get('/api/materials', 'MaterialsController@searchAllMaterials');
-$router->get('/api/material/{id}', 'MaterialsController@searchMaterial');
 
 /**
- * URI de Pesquisa de materiais
+ * Rotas relativas aos materiais recicláveis
  */
+$router->group(['prefix' => '/api'], function()use ($router){
+    $router->get('/users', 'EcoUserController@searchAllUsers');
+    });
 
-$router->post('/api/material', 'MaterialsController@createMaterial');
+$router->post('/api/user', 'EcoUserController@createUser');
+$router->get('/api/materials', 'MaterialsController@searchAllMaterials');//URI de Pesquisa de TODOS os materiais
+
+$router->get('/api/material/{id}', 'MaterialsController@searchMaterial');//URI de Pesquisa de um ÚNICO materiaiL
+
+$router->post('/api/material', 'MaterialsController@createMaterial'); // URI de EDIÇÃO de materiais
+
+$router->put('/api/material/{id}', 'MaterialsController@edtiMaterial');//URI de ATUALIZAÇÃO de materiais
+
+$router->delete('/api/material/{id}', 'MaterialsController@deleteMaterial');//URI de REMOÇÃO de materiais
+
 /**
- * URI de EDIÇÃO de materiais
+ * Rotas relativas aos Usuários do sistema
+ *
  */
-$router->put('/api/material/{id}', 'MaterialsController@edtiMaterial');
-/**
- * URI de REMOÇÃO de materiais
- */
-$router->delete('/api/material/{id}', 'MaterialsController@deleteMaterial');
+$router->post('/api/user', 'EcoUserController@createUser'); //URI de Criação de Usuário

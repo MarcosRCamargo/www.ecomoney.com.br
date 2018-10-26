@@ -23,7 +23,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-// $app->withFacades();
+ $app->withFacades(true,[
+     \Illuminate\Support\Facades\Hash::class => 'Hash'
+ ]);
 
 $app->withEloquent();
 
@@ -59,12 +61,12 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
+//$app->middleware([
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
-
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
+//
+//$app->routeMiddleware([
+//    'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
 
 /*

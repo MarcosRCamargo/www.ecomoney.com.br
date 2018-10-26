@@ -10,6 +10,7 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
+    protected $primaryKey = 'id_user';
     use Authenticatable, Authorizable;
 
     /**
@@ -18,7 +19,14 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'user_name',
+        'user_mail',
+        'cpf',
+        'user_phone',
+        'password',
+        'api_key',
+        'tb_profile_user_id_profile_type',
+        'tb_company_id_company'
     ];
 
     /**

@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 class Materials extends Model
 {
     protected $table = 'tb_materialtypes';
+    protected $primaryKey = 'id_materialtypes';
 
     protected $fillable = [
         'id_materialtypes', 'desc_material', 'price', 'point_values'
@@ -23,5 +24,6 @@ class Materials extends Model
     ];
 
     public $timestamps = false;
+
 
 }
