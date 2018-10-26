@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a97e884-6f11-48a5-bf84-2d198c61af99" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/api/v1/app/Http/Controllers/EcoUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/app/Models/Materials.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/app/Models/Materials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/database/factories/ModelFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/database/factories/ModelFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryinterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryinterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/v1/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1/tests/ExampleTest.php" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,7 +32,42 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="MaterialsService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/v1/app/Services/MaterialsService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+              <folding>
+                <element signature="e#6#106#0#PHP" expanded="true" />
+                <element signature="e#132#160#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepositoryEloquent.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryEloquent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersService.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/v1/app/Services/UsersService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+              <folding>
+                <element signature="e#133#161#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="&lt;3d2b98e7-80fc-4f11-98f7-2428a9169828&gt;/view/login.php" />
-        <option value="&lt;3d2b98e7-80fc-4f11-98f7-2428a9169828&gt;/view/Panel.php" />
         <option value="&lt;3d2b98e7-80fc-4f11-98f7-2428a9169828&gt;/view/Register.php" />
         <option value="&lt;3d2b98e7-80fc-4f11-98f7-2428a9169828&gt;/controller/HomeController.php" />
         <option value="&lt;3d2b98e7-80fc-4f11-98f7-2428a9169828&gt;/view/Index.php" />
@@ -120,10 +146,12 @@
         <option value="$PROJECT_DIR$/api/v1/database/seeds/UsersTableSeeder.php" />
         <option value="$PROJECT_DIR$/api/v1/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/api/v1/bootstrap/app.php" />
-        <option value="$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/api/v1/app/Http/Controllers/EcoUserController.php" />
-        <option value="$PROJECT_DIR$/api/v1/app/Services/UserService.php" />
         <option value="$PROJECT_DIR$/api/v1/routes/web.php" />
+        <option value="$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryinterface.php" />
+        <option value="$PROJECT_DIR$/api/v1/app/Services/UserService.php" />
+        <option value="$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/api/v1/app/Services/UsersService.php" />
       </list>
     </option>
   </component>
@@ -173,6 +201,37 @@
               <item name="www.ecomoney.com.br" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="v1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www.ecomoney.com.br" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www.ecomoney.com.br" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="v1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www.ecomoney.com.br" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www.ecomoney.com.br" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="v1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repositories" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www.ecomoney.com.br" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www.ecomoney.com.br" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="v1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Services" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www.ecomoney.com.br" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www.ecomoney.com.br" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="v1" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -203,8 +262,8 @@
       <recent name="C:\wamp64\www\www.ecomoney.com.br\api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\www.ecomoney.com.br\api\v1\app\Repositories" />
       <recent name="C:\wamp64\www\www.ecomoney.com.br\api\v1\app\Services" />
+      <recent name="C:\wamp64\www\www.ecomoney.com.br\api\v1\app\Repositories" />
       <recent name="C:\wamp64\www\www.ecomoney.com.br\api\v2e\apigotour\tests" />
       <recent name="C:\wamp64\www\www.ecomoney.com.br\api\v1" />
     </key>
@@ -246,7 +305,7 @@
       <workItem from="1539732874885" duration="3158000" />
       <workItem from="1539910235906" duration="14516000" />
       <workItem from="1540080928899" duration="21477000" />
-      <workItem from="1540292089766" duration="12689000" />
+      <workItem from="1540292089766" duration="15457000" />
     </task>
     <task id="LOCAL-00001">
       <created>1539237573007</created>
@@ -322,21 +381,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106420000" />
+    <option name="totallyTimeSpent" value="109188000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3269565" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3269565" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3930435" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.46214512" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30810398" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30810398" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32978722" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.34086958" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -347,7 +408,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" order="11" visible="true" weight="0.3290938" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3419244" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -399,7 +459,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/include/DbConnect.php" />
     <entry file="file://$PROJECT_DIR$/api/include/DbOperation.php" />
     <entry file="file://$PROJECT_DIR$/css/aquamarine.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -588,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/app/Models/UserEcoMoney.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/v2e/apigotour/vendor/illuminate/database/Schema/Blueprint.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -619,31 +671,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/app/Models/Materials.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/MaterialRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/MaterialsRepositoryinterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="38" lean-forward="true" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/app/Services/MaterialsService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#106#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -714,40 +748,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding>
-            <element signature="e#137#165#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1/database/migrations/2018_10_25_031857_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryinterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="e#6#106#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/app/Services/UserService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding>
-            <element signature="e#132#178#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="e#7#271#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1/app/Http/Controllers/MaterialsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -779,6 +773,82 @@
           <folding>
             <element signature="e#141#166#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <element signature="e#7#271#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Models/Materials.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryinterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/MaterialRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="e#137#162#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Models/UserEcoMoney.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Services/UserService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Services/MaterialsService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#106#0#PHP" expanded="true" />
+            <element signature="e#132#160#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Services/UsersService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#133#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1/app/Repositories/UserRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>

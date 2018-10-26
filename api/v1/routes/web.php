@@ -17,7 +17,8 @@ $router->group(['prefix' => '/api'], function()use ($router){
     $router->get('/users', 'EcoUserController@searchAllUsers');
     });
 
-$router->post('/api/user', 'EcoUserController@createUser');
+$router->get('/api/user', 'EcoUserController@searchAllUsers');
+
 $router->get('/api/materials', 'MaterialsController@searchAllMaterials');//URI de Pesquisa de TODOS os materiais
 
 $router->get('/api/material/{id}', 'MaterialsController@searchMaterial');//URI de Pesquisa de um ÚNICO materiaiL

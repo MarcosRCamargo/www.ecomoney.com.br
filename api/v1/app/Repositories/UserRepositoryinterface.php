@@ -10,11 +10,11 @@ namespace App\Repositories;
 
 use Illuminate\Http\Request;
 
-interface UsersRepositoryinterface
+interface UserRepositoryinterface
 {
     public function searchAllUsers();
-    public function searchMUser(int $id);
-    public function createUaser(Request $request);
-    public function edtiUaser(int $id, Request $request);
-    public function deleteUaser(int $id);
+    public function searchUser(int $id);
+    public function createUser(Request $request);
+    public function edtiUser(int $id, Request $request);
+    public function deleteUser(int $id);
 }

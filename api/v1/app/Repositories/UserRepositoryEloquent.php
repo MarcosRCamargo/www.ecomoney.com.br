@@ -9,80 +9,65 @@
 namespace App\Repositories;
 
 use App\Models\UserEcoMoney;
-use App\Repositories\UsersRepositoryinterface;
+use App\Repositories\UserRepositoryinterface;
 use Illuminate\Http\Request;
 
-class UserRepositoryEloquent implements UsersRepositoryinterface
+class UsersRepositoryEloquent implements UserRepositoryinterface
 {
     private $user;
     protected $prymaryKey = 'id_user';
 
     public function __construct(UserEcoMoney $user)
     {
-        $this->User = $user;
+        $this->user = $user;
     }
 
     public function searchAllUsers()
     {
-        // TODO: Implement seacrhAllUsers() method.
+        // TODO: Implement searchAllUsers() method.
         return $this->user
             ->select(
-                'id_Usertypes',
-                'desc_User',
-                'price',
-                'point_values'
+                'user_name',
+                'user_mail',
+                'user_datebirth',
+                'cpf',
+                'user_phone'
             )->get();
     }
+
     public function searchUser(int $id)
     {
-        // TODO: Implement seacrhUsers() method.
+        // TODO: Implement searchUserl() method.
         return $this->user
             ->select(
-                'id_Usertypes',
-                'desc_User',
-                'price',
-                'point_values'
+                'user_name',
+                'user_mail',
+                'user_datebirth',
+                'cpf',
+                'user_phone'
             )
-            ->where('id_Usertypes',$id)
+            ->where('id_user',$id)
             ->get();
     }
+
     public function createUser(Request $request)
     {
         // TODO: Implement createUser() method.
         return $this->user->create($request->all());
     }
+
     public function edtiUser(int $id, Request $request)
     {
         // TODO: Implement edtiUser() method.
         return $this->user
-            ->where('id_Usertypes', $id)
+            ->where('id_user', $id)
             ->update($request->all());
     }
+
     public function deleteUser(int $id)
     {
         // TODO: Implement deleteUser() method.
-
-        $User = $this->user->find($id);
-        return $User->delete();
-    }
-
-    public function searchMUser(int $id)
-    {
-        // TODO: Implement searchMUser() method.
-    }
-
-    public function createUaser(Request $request)
-    {
-        // TODO: Implement createUaser() method.
-    }
-
-    public function edtiUaser(int $id, Request $request)
-    {
-        // TODO: Implement edtiUaser() method.
-    }
-
-    public function deleteUaser(int $id)
-    {
-        // TODO: Implement deleteUaser() method.
+        $material = $this->user->find($id);
+        return $material->delete();
     }
 }
