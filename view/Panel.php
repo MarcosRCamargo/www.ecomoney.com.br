@@ -5,6 +5,7 @@
  * Date: 17/04/2018
  * Time: 00:58
  */
+include 'Requests/Materials.php';
 ?>
 
 <!DOCTYPE html>
@@ -615,7 +616,7 @@
                              <table class="table">
                                 <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col">#</th>
+                                    <th scope="col">Cod</th>
                                     <th scope="col">Material</th>
                                     <th scope="col">Valor</th>
                                     <th scope="col" ></th>
@@ -624,50 +625,23 @@
 
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td><input type="text" class="form-control" value="Alumínio" readonly="readonly" disabled="disabled"></td>
-                                    <td><input type="text"  class="form-control" value="4.50" readonly="readonly" disabled="disabled"></td>
-                                    <td><button type="button"  class="btn-warning form-control" value="" >Alterar</button></td>
-                                    <td><button type="button"  class="btn-danger form-control" value="" >Excluir</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td><input type="text" class="form-control" value="Papel" readonly="readonly" disabled="disabled"></td>
-                                    <td><input type="text"  class="form-control" value="1.50" readonly="readonly" disabled="disabled"></td>
-                                    <td><button type="button"  class="btn-warning form-control" value="" >Alterar</button></td>
-                                    <td><button type="button"  class="btn-danger form-control" value="" >Excluir</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td><input type="text" class="form-control" value="Plastico Pet" readonly="readonly" disabled="disabled"></td>
-                                    <td><input type="text"  class="form-control" value="2.50" readonly="readonly" disabled="disabled"></td>
-                                    <td><button type="button"  class="btn-warning form-control" value="" >Alterar</button></td>
-                                    <td><button type="button"  class="btn-danger form-control" value="" >Excluir</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td><input type="text" class="form-control" value="Vidro" readonly="readonly" disabled="disabled"></td>
-                                    <td><input type="text"  class="form-control" value="2.75" readonly="readonly" disabled="disabled"></td>
-                                    <td><button type="button"  class="btn-warning form-control" value="" >Alterar</button></td>
-                                    <td><button type="button"  class="btn-danger form-control" value="" >Excluir</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td><input type="text" class="form-control" value="Cobre" readonly="readonly" disabled="disabled"></td>
-                                    <td><input type="text"  class="form-control" value="5.50" readonly="readonly" disabled="disabled"></td>
-                                    <td><button type="button"  class="btn-warning form-control" value="" >Alterar</button></td>
-                                    <td><button type="button"  class="btn-danger form-control" value="" >Excluir</button></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td><input type="text" class="form-control" value="Metal" readonly="readonly" disabled="disabled"></td>
-                                    <td><input type="text"  class="form-control" value="1.25" readonly="readonly" disabled="disabled"></td>
-                                    <td><button type="button"  class="btn-warning form-control" value="" >Alterar</button></td>
-                                    <td><button type="button"  class="btn-danger form-control" value="" >Excluir</button></td>
-                                </tr>
-                                </tbody>
+
+                                <?php
+                                foreach ($data as $key => $value) {
+                                    $moeda ="R$";
+                                    echo
+                                    "<tbody>
+                                     <tr>
+                                    <th scope='row'>ECO - 0". $value['id_materialtypes'] ."</th>
+                                    <td><input type='text' class='form-control' value=". $value['desc_material'] ." readonly='readonly' disabled='disabled'></td>" .
+                                    "<td><input type='text'  class='form-control' value=". $moeda . $value['price'] ." readonly='readonly' disabled='disabled'></td>" .
+                                    "<td><button type='button'  class='btn-warning form-control' value='' >Alterar</button></td>
+                                    <td><button type='button'  class='btn-danger form-control' value='' >Excluir</button></td>
+                                    </tr>
+                                    </tbody>
+                                    ";
+                               }
+                                ?>
                             </table>
                     </div>
                     <!-- /TAB PANE VALUES -->
