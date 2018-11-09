@@ -9,18 +9,19 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+  <nav class="navbar navbar-expand-md navbar-light bg-success">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <ul class="nav nav-tabs">
-            <li class="nav-item"> <a href="#" class="nav-link disabled"><i class="fa fa-home fa-home"></i>&nbsp;Home</a> </li>
-            <li class="nav-item"> <a href="#" class="nav-link disabled"><i class="fa fa-home fa-home"></i>&nbsp;Home</a> </li>
-            <li class="nav-item"> <a href="#" class="nav-link disabled"><i class="fa fa-home fa-home"></i>&nbsp;Home</a> </li>
+            <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabone"><i class="fa fa-home fa-home fa-2x"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link" href="" data-toggle="tab" data-target="#tabtwo"><i class="fa fa-2x fa-money"></i></a> </li>
+            <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabthree" contenteditable="true"><i class="fa fa-map fa-2x"></i></a> </li>
+            <li class="nav-item"> <a href="" class="nav-link" data-toggle="tab" data-target="#tabfour" contenteditable="true"><i class="fa fa-user-circle fa-2x"></i></a> </li>
           </ul>
         </div>
       </div> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent"> <span class="navbar-toggler-icon"></span> </button>
-      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+      <div class="collapse navbar-collapse text-center" id="navbar2SupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item"> <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-bookmark-o"></i> Bookmarks</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#"><i class="fa d-inline fa-lg fa-envelope-o"></i> Contacts</a> </li>
@@ -29,6 +30,80 @@
     </div>
   </nav>
   <div class="py-6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th style="">First Name</th>
+                    <th>Last Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="">Tab pane one. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+              <div class="alert alert-primary" role="alert"> <button type="button" class="close" data-dismiss="alert">×</button>
+                <h4 class="alert-heading">Well done!</h4>
+                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabthree" role="tabpanel">
+              <form class="form-inline">
+                <div class="input-group"> <input type="email" class="form-control" placeholder="Your email">
+                  <div class="input-group-append"> <button class="btn btn-primary" type="button">Subscribe</button> </div>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="tabfour" role="tabpanel">
+              <div class="card">
+                <div class="row mb-4">
+                  <div class="col-3"> <img class="img-fluid d-block mx-auto rounded-circle" src="../assets/perfil.jpg" width="100" alt="Card image cap"> </div>
+                  <div class="col-9">
+                    <h4> <b>Marcos</b></h4>
+                    <p class="mb-0">CEO and founder</p>
+                  </div>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-body"> <a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a> </div>
+              </div>
+              <form class="form-inline">
+                <div class="input-group"> <input type="email" class="form-control" placeholder="Your email">
+                  <div class="input-group-append"> <button class="btn btn-primary" type="button">Subscribe</button> </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-12">

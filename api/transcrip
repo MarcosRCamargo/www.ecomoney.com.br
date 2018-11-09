@@ -1,0 +1,9 @@
+
+            "user_name" : "Marcos Rubens de Camargo",
+            "user_mail" : "marcos.marrize@gmail.com",
+            "cpf" : "36064845856",
+            "user_phone" : "06199936-2974",
+            "password" : "1234",
+            "api_key" : $bytes = random_bytes(32),
+            "tb_profile_user_id_profile_type" : "1",
+            "tb_company_id_company " : ""
