@@ -25,6 +25,6 @@ class HomeController
     {
         $model = new LoggedUser();
         $user = $model->UserLogged();
-        include "view/Panel.php";
+        include "view/index";
     }
 }

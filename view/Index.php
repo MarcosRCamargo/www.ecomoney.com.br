@@ -1,42 +1,198 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Marcos Rubens de Camargo
- * Date: 17/04/2018
- * Time: 00:44
- */
-?>
-
-
+<?php $user = "Marcos Rubens de Camargo"?>
 <!DOCTYPE html>
 <html>
+<link rel="icon" href="assets/app/icon.png"><title>EcoMoney - Coleta Inteligente</title>
+<meta charset="utf-8">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet"  type="text/css" href="css/ecomoney.less">
+<link rel="stylesheet"  type="text/css" href="css/notifIt.css">
+<link rel="stylesheet"  type="text/css" href="../css/aquamarine.css">
+<link rel="stylesheet"  type="text/css" href="../mobile/app.scss">
+<link rel="stylesheet"  type="text/css" href="../mobile/theme.scss">
+<script src="GestorApp/js/Materials.js"></script>
+<script src="GestorApp/js/notifIt.min.js"></script>
+<script src="GestorApp/js/notifIt.js"></script>
+<script src="js/animationCounter.js" charset="utf-8"></script>
+<body onload="footerInclude()">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- PAGE settings -->
-    <link rel="icon" href="assets/app/icon.png">
-    <title>App EcoMoney</title>
-    <meta name="description" content="Free Bootstrap 4 Pingendo Aquamarine template made for app and softwares.">
-    <meta name="keywords" content="Pingendo app aquamarine free template bootstrap 4">
-    <!-- CSS dependencies -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/aquamarine.css">
-    <!-- Script: Make my navbar transparent when the document is scrolled to top -->
-    <script src="js/navbar-ontop.js"></script>
-    <!-- Script: Animated entrance -->
-    <script src="js/animate-in.js"></script>
-</head>
+<div class="modal" id="deleteUser">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" id="deleteUser">
+                <h5 class="modal-title">Excluir Usuário</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir este Usuário?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Sim</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="deleteMaterial">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" id="deleteMaterial">
+                <h5 class="modal-title">Excluir Material</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir este Material?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Sim</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="dataPartner">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" id="dataPartner">
+                <h2 class="modal-title">Visualizar dados</h2>
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <div class="modal-body">
+<!--               dados da empresa-->
+                <div class="modal-content">
+                    <h4 class="mb-3 text-center">
+                        <b class="">Dados da Empresa</b>
+                    </h4>
+                    <div class="col-md-12 order-md-1">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName">Nome</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                           required="">
+                                    <div class="invalid-feedback"> Valid first name is required.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName">Sobrenome</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                           required="">
+                                    <div class="invalid-feedback"> Valid last name is required.</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="username">Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="username" placeholder="Username"
+                                           required="">
+                                    <div class="invalid-feedback" style="width: 100%;"> Your username is required.</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email">E-mail </label>
+                                <input type="email" class="form-control" id="email" placeholder="nome@email.com"
+                                       required="required">
+                                <div class="invalid-feedback"> Por favor informe um endereço de e-mail válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address">Endereço</label>
+                                <input type="text" class="form-control" id="address" placeholder="QNN 20 Conjunto D 31"
+                                       required="">
+                                <div class="invalid-feedback"> Por favor informe um endereço válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="address2">Complemento&nbsp;
+                                    <span class="text-muted">(Opicional)</span>
+                                </label>
+                                <input type="text" class="form-control" id="address2"
+                                       placeholder="Quadra ou Logradouro"></div>
+                            <div class="row">
+                                <div class="col-md-5 mb-3">
+                                    <label for="country">Cidade</label>
+                                    <input type="text" class="form-control" id="country" placeholder="" required="">
+                                    <div class="invalid-feedback"> Por favor informe uma cidade válida.</div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="state">Estado</label>
+                                    <select class="custom-select d-block w-100" id="state" required="">
+                                        <option value="">Escolha um estado...</option>
+                                        <option value="	AC	"> Acre</option>
+                                        <option value="	AL	"> Alagoas</option>
+                                        <option value="	AP	"> Amapá</option>
+                                        <option value="	AM	"> Amazonas</option>
+                                        <option value="	BA	"> Bahia</option>
+                                        <option value="	CE	"> Ceará</option>
+                                        <option value="	DF	"> Distrito Federal</option>
+                                        <option value="	ES	"> Espírito Santo</option>
+                                        <option value="	GO	"> Goiás</option>
+                                        <option value="	MA	"> Maranhão</option>
+                                        <option value="	MT	"> Mato Grosso</option>
+                                        <option value="	MS	"> Mato Grosso do Sul</option>
+                                        <option value="	MG	"> Minas Gerais</option>
+                                        <option value="	PA	"> Pará</option>
+                                        <option value="	PB	"> Paraíba</option>
+                                        <option value="	PR	"> Paraná</option>
+                                        <option value="	PE	"> Pernambuco</option>
+                                        <option value="	PI	"> Piauí</option>
+                                        <option value="	RJ	"> Rio de Janeiro</option>
+                                        <option value="	RN	"> Rio Grande do Norte</option>
+                                        <option value="	RS	"> Rio Grande do Sul</option>
+                                        <option value="	RO	"> Rondônia</option>
+                                        <option value="	RR	"> Roraima</option>
+                                        <option value="	SC	"> Santa Catarina</option>
+                                        <option value="	SP	"> São Paulo</option>
+                                        <option value="	SE	"> Sergipe</option>
+                                        <option value="	TO	"> Tocantins</option>
+                                    </select>
+                                    <div class="invalid-feedback"> Por favor Selecione um estado.</div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="zip">CEP</label>
+                                    <input type="text" class="form-control" id="zip" placeholder="" required="">
+                                    <div class="invalid-feedback"> Código postal é obrigatório.</div>
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Foto do Perfil</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Escolher do
+                                        arquivo...</label>
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="same-address" value="on">
+                                <label class="custom-control-label" for="same-address">Concordo com os termos de uso e
+                                    políticas do site.</label>
+                            </div>
+                            <hr class="mb-4">
+                            <button type="submit" class="btn btn-secondary btn-block">Alterar&nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                                <br></button>
+                            <hr class="mb-4">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Confirmar</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Rejeitar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-<body>
-<!-- Navbar -->
-<nav class="navbar-expand-md navbar-dark fixed-top navbar bg-primary">
-    <div class="container-fluid"> </div>
-</nav>
-<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-primary">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-primary ">
     <div class="container-fluid">
-        <a class="navbar-brand" href="?page=index">
-            <i class="fa d-inline fa-lg fa-envira"></i>
+        <a class="navbar-brand" href="?page=index" onclick="load_home()" >
+            <i class="fab fa-envira"></i>
             <b class="logo">EcoMoney</b>
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,200 +200,146 @@
         </button>
         <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item text-white">
-                    <a class="nav-link" href="#download">
-                        <i class="fa fa-download"></i> Download</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <i class="fa fa-cog"></i> Configurações</a>
+                        <i class="fa fa-1x fa-user"></i> Olá <?php echo $user?></a>
+                </li>
+                <li class="nav-item">
                 </li>
             </ul>
-
-            <a class="btn btn-secondary m-2" href="?page=login">
-                <i class="fa fa-fw fa-user-circle-o"></i>Entrar</a>
+            <a class="btn btn-secondary m-2" onclick="login_Sys()">
+                <i class="fa fa-user fa-fw"></i>Sair</a>
         </div>
     </div>
 </nav>
-<!-- Cover -->
-<div class="pt-5 bg-primary" style="background-image: url('assets/ecomoney.png');">
-    <div class="container mt-5 pt-5">
-        <div class="row section-dark">
-            <div class="col-md-6 my-5 text-lg-left text-center align-self-center text-white">
-                <h1 class="display-1">EcoMoney</h1>
-                <p class="lead">Ecologicamente inteligente</p>
-                <div class="row mt-5">
-                    <div class="col-6 col-lg-5">
-                        <a href="#">
-                            <img class="center-block img-fluid d-block shadowed rounded" src="assets/app/download_android.png"> </a>
-                    </div>
-                    <div class="col-6 col-lg-5">
-                        <a href="#">
-                            <img class="center-block img-fluid d-block shadowed" src="assets/app/download_ios.png"> </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img class="img-fluid d-block mx-auto" src="assets/app/iphone_cover_light.png" width="400"> </div>
-        </div>
-    </div>
+<div>
+    <div class="container py-3"> </div>
 </div>
-<!-- Article style section -->
-<!-- Features -->
-<div class="py-5" id="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="pb-4">Funcionalidades pra ajudar você e o meio ambiente</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="align-self-center text-md-right text-center col-lg-4 col-md-6">
-                <h4 class="text-primary">Acumule pontos&nbsp;</h4>
-                <p class="mb-5">Para cada quilo de material entregue em um ponto de coleta você recebe uma quantidade de EcoPoints que podem ser resgatados ou trocados por produtos nos estabelecimentos parceitos.&nbsp;</p>
-                <h4 class="text-primary">Pontos de coleta fácil</h4>
-                <p class="mb-5">Encontre um ponto de coleta facilmente por meio do aplicativo, alem de mostrar qual estabelecimento é parceito de da a rota e abre o GPS e te guia até o ponto de coleta mais proximo.&nbsp;</p>
-                <h4 class="text-primary">Ajude-nos a Crescer</h4>
-                <p class="mb-5">O EcoMoney veio para ajudar você, o meio ambiente, e uma galera! Então caso queira contribuir com o aplicativo assinale a opção de ajudar a equipe Eco no menu de configurações.</p>
-            </div>
-            <div class="my-3 col-md-4 d-none d-lg-block">
-                <img class="img-fluid d-block mx-auto animate-in-down" src="assets/app/iphone_features_light.png" width="300"> </div>
-            <div class="align-self-center text-md-left text-center col-lg-4 col-md-6">
-                <h4 class="text-primary">Faça várias boas ações!</h4>
-                <p class="mb-5">Além de contribuir com o meio ambiente você ainda pode ajudar quem precisa de ajuda. Por meio do aplicativo você pode escolher uma instituição de caridade e doar seu saudo!</p>
-                <h4 class="text-primary">Resgate em conta virtual</h4>
-                <p class="mb-5">Após acumular um saldo de EcoPoints você poderá trocalo em algum estabelecimento parceiro ou solicitar o resgate do seu saldo por meio do PagSeguro ou PayPal</p>
-                <h4 class="text-primary">Conteúdo EcoMoney</h4>
-                <p class="mb-5">Uma guia voltada para você compreender como funciona o processo de reciclagem e onde sua ação impacta na cidade onde você mora e ao redor do Brasil.&nbsp;</p>
-            </div>
-        </div>
-    </div>
+<div>
+    <div class="container py-3"> </div>
 </div>
-<!-- Features -->
-<!-- Carousel reviews -->
-<div class="py-5 text-white bg-secondary" style="background-image: url(&quot;assets/Background.png&quot;);background-size:fit;background-repeat:no-repeat;">
-    <div class="container">
-        <div class="row text-white">
-            <div class="col-md-6 section-dark border border-primary">
-                <div class="row border border-primary">
-                    <div class="col-md-9">
-                        <p class="lead">
-                            <i>"Ser parceiro da EcoMoney foi um passo muito importante para nós!</i>
-                            <br>
-                            <i>Alem de atrair clientes poder contribuir com o meio ambiente de maneira&nbsp;</i>
-                            <br>
-                            <i>efetiva foi mais do que satisfatório"</i>&nbsp;.
-                            <br>
-                            <br>- Marcos &nbsp;Camargo </p>
-                        <div class="col-md-12"> </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="col-md-12 p-0">
-                            <img class="img-fluid d-block rounded-circle ml-auto py-5" src="assets/perfil.jpg"> </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-9">
-                        <p class="lead">
-                            <i>"Ser parceiro da EcoMoney foi um passo muito importante para nós!</i>
-                            <br>
-                            <i>Alem de atrair clientes poder contribuir com o meio ambiente de maneira&nbsp;</i>
-                            <br>
-                            <i>efetiva foi mais do que satisfatório"</i>&nbsp;.
-                            <br>
-                            <br>- Marcos &nbsp;Camargo </p>
-                        <div class="col-md-12"> </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="col-md-12 p-0">
-                            <img class="img-fluid d-block rounded-circle ml-auto py-5" src="assets/perfil.jpg"> </div>
-                    </div>
-                </div>
-                <div class="row"> </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-12"> </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-12"> </div>
-                    </div>
-                </div>
-                <div class="row"> </div>
-            </div>
-        </div>
-        <div class="row text-white">
-            <div class="col-md-12">
-                <div class="row"> </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-primary" id="download">
-    <div class="container">
-        <div class="row py-3">
-            <div class="col-md-6">
-                <img class="img-fluid d-block my-4 animate-in-left" src="assets/app/iphone_isometric_light.png"> </div>
-            <div class="col-md-6 align-self-center text-center text-md-left">
-                <h1>
-                    <b>Baixar aplicativo agora</b>
-                </h1>
-                <p class="lead text-dark">Baixe o ecomoney e começe a transformar o meio ambiente!</p>
-                <div class="row mt-4">
-                    <div class="col-6 col-md-12">
-                        <a href="#">
-                            <img class="center-block img-fluid d-block shadowed " src="assets/app/download_android.png"> </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="pt-5 bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <p class="lead">Receba Novidades</p>
-                <form class="form-inline">
-                    <div class="form-group">
-                        <input type="email" class="form-control my-1 mr-1" placeholder="Cadastre seu e-mail"> </div>
-                    <button type="submit" class="btn my-1 btn-outline-primary">Inscrever-se</button>
-                </form>
-            </div>
-            <div class="col-4 col-md-1 align-self-center my-3">
-                <a href="https://www.facebook.com" target="blank">
-                    <i class="fa fa-fw fa-facebook fa-3x text-white"></i>
-                </a>
-            </div>
-            <div class="col-4 col-md-1 align-self-center my-3">
-                <a href="https://twitter.com" target="blank">
-                    <i class="fa fa-fw fa-twitter fa-3x text-white"></i>
-                </a>
-            </div>
-            <div class="col-4 col-md-1 align-self-center my-3">
-                <a href="https://www.instagram.com" target="blank">
-                    <i class="fa fa-fw fa-instagram fa-3x text-white"></i>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 my-3 text-center">
-                <p class="text-muted">© Copyright 2018 EcoMoney - Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Call to action -->
-<!-- Footer -->
-<!-- JavaScript dependencies -->
-<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- Script: Smooth scrolling between anchors in the same page -->
-<script src="js/smooth-scroll.js"></script>
-</body>
+<div class="container-fluid"  style="background-image: url('../assets/ecomoney.png');">
+    <div class="row">
 
-</html>
+        <div class="col-3">
+            <div class="card bg-secondary">
+                <img class="rounded-circle mx-auto py-1" src="/assets/perfil.jpg" alt="Card image" width="30%">
+                <div class="card-body">
+                    <p class="card-title">Seja bem Vindo <strong>Marcos Rubens de Camargo</strong> Gestor - EcoMoney</p>
+                    <p class="card-text"><strong></strong></p>
+                </div>
+            </div>
+            <div class="nav flex-column bg-light" role="tablist" aria-orientation="vertical">
+                <a class="nav-link" id="v-page-home-tab" onclick="load_home()" data-toggle="page" href="#home" aria-controls="home" aria-selected="true"><i class="fas fa-home"></i> Início</a>
+                <a class="nav-link" id="v-page-users-tab" onclick="load_showusers()" data-toggle="page" href="#users" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-users"></i> Usuários</a>
+                <a class="nav-link" id="v-page-user-tab" onclick="load_user()" data-toggle="page" href="#data-user" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-user"></i> Perfil</a>
+                <a class="nav-link" id="v-page-edit-user-tab" onclick="load_getMaterials()"data-toggle="page" href="#get-materials" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-cogs"></i> Configurar Materiais</a>
+                <a class="nav-link" id="v-page-payments-requests" onclick="load_payRequests()" data-toggle="page" href="#pay-requests" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-donate"></i> Pagamento de Resgates</a>
+                <a class="nav-link" id="v-page-settings-tab" onclick="load_patners()"data-toggle="page" href="#partnes-data" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-check-square"></i> Validar Cadastros</a>
+            </div>
+        </div>
+        <div id="content"  class="col-xl-8">
+
+        </div>
+    </div>
+</div>
+
+<div w3-include-html="view/GestorApp/Footer.php">
+
+</div>
+
+<script>
+    function load_showusers(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/getUsers.php"></div>';
+        w3.includeHTML();
+    }
+    function load_home(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/Home.php"></div>';
+        w3.includeHTML();
+    }
+    function edit_user(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/EditUser.php"></div>';
+        w3.includeHTML();
+    }
+    function load_caduser(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/CadUser.php"></div>';
+        w3.includeHTML();
+    }
+    function load_user(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/dataUser.php"></div>';
+        w3.includeHTML();
+    }
+    function load_getMaterials(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/getMaterials.php"></div>';
+        w3.includeHTML();
+    }
+    function load_patners(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/listPartnes.php"></div>';
+        w3.includeHTML();
+    }function load_payRequests(){
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/payRequests.php"></div>';
+        w3.includeHTML();
+    }function refreshPage() {
+        cache:false;
+
+    }
+    $('#myModal').modal('show')
+    function footerInclude() {
+        document.getElementById("content").innerHTML='<div w3-include-html="view/GestorApp/Home.php"></div>';
+        w3.includeHTML();
+    }
+    function login_Sys() {
+        window.location.href = "?page=login";
+    }
+
+</script>
+
+<script type="text/javascript">
+    $('#counter-block').ready(function(){
+        $('.points').animationCounter({
+            start: 600,
+            step: 1,
+            end:1320,
+            delay:10
+        });
+        $('.globalpoints1').animationCounter({
+            start: 3245677,
+            end: 3545677,
+            step: 10,
+            delay:20,
+            txt: ' Kg'
+        });
+        $('.globalpoints2').animationCounter({
+            start: 225677,
+            end: 245677,
+            step: 10,
+            delay:20,
+            txt: ' Kg'
+        });
+        $('.globalpoints3').animationCounter({
+            start: 140000,
+            end: 145677,
+            step: 10,
+            delay:20,
+            txt: ' Kg'
+        });
+        $('.newpoints').animationCounter({
+            start: 50,
+            end: 570,
+            step: 4,
+            delay: 10
+        });
+        $('.atualpoints').animationCounter({
+            start: 490,
+            end: 1560,
+            step: 20,
+            delay: 900,
+            txt: ' pst'
+        });
+    });
+</script>
+<script src="GestorApp/js/animationCounter.js" charset="utf-8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" style=""></script>
+

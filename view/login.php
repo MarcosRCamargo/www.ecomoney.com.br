@@ -81,7 +81,7 @@
                                         <label class="form-check-label" for="exampleCheck1">Mantenha-me conectado neste navegador</label>
                                     </div>
                                 </div>
-                                <a class="btn btn-secondary btn-block" href="?page=panel">Entrar</a>
+                                <a class="btn btn-secondary btn-block" href="?page=index">Entrar</a>
                             </form>
                         </div>
                     </div>
